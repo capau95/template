@@ -1,1 +1,1 @@
-# template
+my template repository
