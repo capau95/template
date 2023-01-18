@@ -2,14 +2,14 @@ HEADERS = kbfunc.h
 
 all: kb kbfunc
 
+kb: kb.o kbfunc.o
+	gcc -o kb kb.o kbfunc.o
+	
 kb.o: kb.c
-	gcc -c kb.c -o kb.o
+	gcc -c kb.c
 
 kbfunc.o: kbfunc.c
-	gcc -c kbfunc.c -o kbfunc.o
-
-kb: kb.o kbfunc.o
-	gcc kb.o kbfunc.o -o kb
+	gcc -c kbfunc.c
 
 clean: 
 	-rm -f kb.o	
